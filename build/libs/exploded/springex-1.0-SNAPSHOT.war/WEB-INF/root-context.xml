@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--  root-context.xml : 일반적으로 스프링 프레임워크 이용시 사용하는 기본 설정 파일 -->
+
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
@@ -9,6 +12,10 @@
        https://www.springframework.org/schema/context/spring-context.xsd
        http://mybatis.org/schema/mybatis-spring
        http://mybatis.org/schema/mybatis-spring.xsd">
+
+    <!-- context:component-scan : 패키지를 지정해서 해당 패키지내 클래스의 인스턴스들을
+                                  스프링의 빈으로 등록하기 위해서 사용
+                                  특정 어노테이션을 이용해서 스프링의 빈으로 관리될 객체를 표시-->
 
     <context:component-scan base-package="net.ict.springex.config"/>    <!--빈 등록-->
 
